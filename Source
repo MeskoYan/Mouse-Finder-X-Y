@@ -1,0 +1,12 @@
+import time
+import pyautogui
+# Exibe um alerta com o botão personalizado
+pyautogui.alert("Clique no botão para iniciar a contagem regressiva e obter a posição do seu mouse", "Início", button="Entendido")
+# Contagem regressiva
+for i in range(4, 0, -1):
+    print(f"{i}...")
+    time.sleep(1)  # Espera 1 segundo entre as mensagens
+# Captura a posição atual do mouse
+currentMouseX, currentMouseY = pyautogui.position()
+# Exibe a posição capturada em um alerta
+pyautogui.alert(f"A posição atual do mouse é: X = {currentMouseX}, Y = {currentMouseY}", "Posição do Mouse")
